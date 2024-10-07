@@ -4,11 +4,11 @@ pipeline {
     stages {
         stage('init') {
             steps {
-                
-                sh ''' 
-                   cd vpc
+                echo 'Building..Stage'
+
+                sh '''
                    ls -l
-                   pwd 
+                   pwd
                    terraform init
 
                 '''
@@ -16,16 +16,15 @@ pipeline {
         }
         stage('plan') {
             steps {
-                 
-                 sh'''
-                   cd vpc
-                   ls -l
+                
+                sh'''
+                    ls -l
                    pwd
-                   terraform plan
-                 '''
+                   terraform init
+                '''
             }
         }
-        
+       
     }
  post { 
         always { 
