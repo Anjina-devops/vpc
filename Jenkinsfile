@@ -28,6 +28,20 @@ pipeline {
                 '''
             }
         }
+        stage('Approve') {
+            steps {
+                input 'Shall i Apply?'
+
+              }
+        }
+
+        stage('apply') {
+            steps {
+                  
+                  sh 'terraform apply -auto-approve'
+
+              }
+        }
        
     }
  post { 
