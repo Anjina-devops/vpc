@@ -43,6 +43,20 @@ pipeline {
               }
         }
        
+       stage('Approve') {
+            steps {
+                input 'Shall i destroy?'
+
+              }
+        }
+
+        stage('destroy') {
+            steps {
+                  
+                  sh 'terraform apply -auto-approve'
+
+              }
+        }
     }
  post { 
         always { 
