@@ -20,7 +20,7 @@ pipeline {
                 sh'''
                     ls -l
                    pwd
-                   terraform init
+                   terraform plan
                 '''
             }
         }
