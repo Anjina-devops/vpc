@@ -43,7 +43,7 @@ pipeline {
               }
         }
        
-       stage('Approve') {
+       stage('Destroy') {
             steps {
                 input 'Shall i destroy?'
 
