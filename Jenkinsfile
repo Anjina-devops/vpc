@@ -45,7 +45,7 @@ pipeline {
        
        stage('Destroy') {
             steps {
-                input 'Destroy?'
+                input 'Shall I Destroy?'
 
               }
         }
