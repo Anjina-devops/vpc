@@ -43,9 +43,9 @@ pipeline {
               }
         }
        
-       stage('destroy') {
+       stage('Destroy') {
             steps {
-                input 'Shall i destroy?'
+                input 'Destroy?'
 
               }
         }
