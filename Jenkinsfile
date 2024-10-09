@@ -28,9 +28,9 @@ pipeline {
                 '''
             }
         }
-        stage('Approve') {
+        stage('approve') {
             steps {
-                input 'Shall i Apply?'
+                input 'Apply?'
 
               }
         }
@@ -43,7 +43,7 @@ pipeline {
               }
         }
        
-       stage('Destroy') {
+       stage('destroy') {
             steps {
                 input 'Shall i destroy?'
 
