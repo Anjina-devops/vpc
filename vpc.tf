@@ -78,7 +78,7 @@ resource "aws_route_table_association" "private" {
 # create security group and allow port no 80 from public and 22 only from your laptop
 
 resource "aws_security_group" "allow_http_ssh" {
-  name        = "allow_tls"
+  name        = "allow_http_ssh"
   description = "Allow tls inbound traffic"
   vpc_id      = "${aws_vpc.main.id}"
 
